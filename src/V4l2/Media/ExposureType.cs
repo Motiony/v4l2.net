@@ -10,9 +10,9 @@ namespace Iot.Device.Media
     public enum ExposureType : int
     {
         /// <summary>
-        /// Auto
+        /// Pperture Priority
         /// </summary>
-        Auto = 0,
+        PperturePriority = 0,
 
         /// <summary>
         /// Manual
@@ -25,8 +25,8 @@ namespace Iot.Device.Media
         ShutterPriority = 2,
 
         /// <summary>
-        /// Pperture Priority
+        /// Auto
         /// </summary>
-        PperturePriority = 3
+        Auto = 3
     }
 }

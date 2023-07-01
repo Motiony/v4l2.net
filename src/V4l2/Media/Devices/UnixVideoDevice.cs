@@ -165,6 +165,16 @@ namespace Iot.Device.Media
             return result;
         }
 
+        public override void SetVideoSettings(VideoDeviceValueType videoDeviceValueType, int value)
+        {
+            v4l2_control ctrl = new v4l2_control
+            {
+                id = videoDeviceValueType,
+                value = value
+            };
+            V4l2Struct(VideoSettings.VIDIOC_S_CTRL, ref ctrl);
+        }
+
         private unsafe byte[] ProcessCaptureData()
         {
             fixed (V4l2FrameBuffer* buffers = &ApplyFrameBuffers()[0])
