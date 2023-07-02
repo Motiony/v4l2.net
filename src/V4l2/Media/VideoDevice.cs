@@ -67,6 +67,14 @@ namespace Iot.Device.Media
         /// <returns>Supported resolution.</returns>
         public abstract IEnumerable<(uint Width, uint Height)> GetPixelFormatResolutions(PixelFormat format);
 
+        /// <summary>
+        /// Set directly camera property.
+        /// </summary>
+        /// <param name="videoDeviceValueType">Camera property</param>
+        /// <param name="value">Camera property value</param>
+        /// <returns>Supported resolution.</returns>
+        public abstract void SetVideoSettings(VideoDeviceValueType videoDeviceValueType, int value);
+
         /// <inheritdoc/>
         public void Dispose()
         {
